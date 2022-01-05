@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--스크롤을 위해 한 것. 신경 안 써도 됨.-->
+    <style>        
+        div {
+            padding-top: 500px;
+            height: 500px;
+        }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li><a href="#first">1단원 이동</a></li>
+
+        <li>
+            <a href="#second">
+                2단원 이동
+            </a>
+        </li>
+
+        <li><a href="#third">3단원 이동</a></li>
+    </ul>
+
+    <div id="first">1단원 본문</div>
+    <div id="second">2단원 본문</div>
+    <div id="third">3단원 본문</div>
+    <a href="#top">맨 위로 바로가기</a>
+</body>
+</html>
+
+<!--
+    그 페이지 내부에서의 링크를 이용한 이동
+        : 목적지에 id를 지정한 후, 버튼(li) 내부의 글자를 <a>씌운다.
+        이 때 href의 주소는 #ID.
+        맨 위로 가고싶은 경우, #top
+-->
