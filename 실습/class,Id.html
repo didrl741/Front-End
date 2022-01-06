@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #block
+        {
+            background-color: yellow;
+        }
+        .title
+        {
+            color:red;
+        }
+        .bold
+        {
+            font-weight: bold;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="block" >       <!--div로 이 두개를 감쌌다.-->
+        <h2 class="title" >제목태그</h2>
+        <h3 class="title" >제목태그2</h3>
+
+        <p>
+            문단태그 Season’s <span class="title bold"> hello </span>greetings. As some of you already know, we are starting 
+            the campus food drive.This is how you participate. You can bring your items 
+            for donation to our booths. Our donation boothsare located in the lobbies 
+        </p>
+    </div>
+
+
+</body>
+</html>
+
+<!--
+    div와 span 태그
+        : 여러개의 태그를 하나로 그룹짓거나 공통적인 스타일을 지정하기 위해 사용.
+        : css, js와 함께 동작하기 위해, id와 class 속성과 함께 사용.
+            class, id : 태그에 이름을 붙일 때 사용되는 속성.
+        : 정해진 역할이나 필수속성이 없다. 태그를 적용해도 다른 태그들의 모양이나 
+        배치를 해치지 않는, 비어있는 태그.
+        div : 볼록태그
+        span : 인라인태그.
+
+        style 태그에서,
+            id를 호출할 때는 #을,
+            class를 호출할 때는 .을 이용.
+
+        class는 id보다 조금 더 유연하다 : 한번 선언되고 사용된 클래스를
+            다른 태그에 중복적으로 사용할 수 있다.
+            한 태그에 여러가지 class를 적용할 수도 있다.
+
+        id는 문서 전체에서 딱 한 번만 선언되고 사용될 수 있다.
+            태그당 하나의 아이디만 적용 가능, 이미 사용되고있는 id를 다른 태그에서
+            사용 불가.
+            하나의 태그에 아이디와 태그를 각각 적용하는 것은 가능.
+
+-->

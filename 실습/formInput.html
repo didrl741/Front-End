@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="이름을 입력하시오"  />
+        <input type="email" placeholder="이메일을 입력하시오"  />
+        <input type="password" placeholder="비밀번호을 입력하시오"  />
+        <input type="submit" value="회원가입" />
+        <button>버튼타입</button>
+    </form>
+
+    <br/>
+
+    <label for="name" >이름</label>
+    <input type="text" id="name" placeholder="이름"  />
+    <br/>
+
+    <label for="man">남</label>
+    <input id="man" type="radio" name="gender" />
+    <label for="woman">여</label>
+    <input id="woman" type="radio" name="gender" />
+    <br/>
+    <br/>
+
+    <label for="soccer">축구</label>
+    <input id="soccer" type="checkbox" name="hobby" />
+    <label for="baseball">야구</label>
+    <input id="baseball" type="checkbox" name="hobby" />
+    <label for="tennis">테니스</label>
+    <input id="tennis" type="checkbox" name="hobby" />
+
+</body>
+</html>
+
+<!--
+    https://developer.mozilla.org/ko/docs/Web/HTML/Element/input
+    form 태그 : 사용자의 입력을 받아서 데이터를 웹 서버등으로 전송할 때 사용.
+        여는 태그와 닫는 태그 사이에 하나 이상의 input 위젯으로 구성.
+        placeholder : 무엇을 입력해야 할 지 알려줌.
+        submit : 서버로 form 내용을 전송.
+        button : 아무 행동 X
+        reset : form의 내용을 모두 초기값으로 되돌림.
+
+    input 대신 button : input의 submit과 똑같은 기능. 스타일링이 조금 더 쉽다.
+
+    label 태그:
+        사용자 인터페이스 항목에 라벨(이름)을 붙여줌 + 연결도 해줌.
+
+    라디오버튼(1개만 선택)
+
+    체크박스(다중선택 가능)
+
+    작성한 form을 서버로 전송하려면?
+        form 태그에 action 속성과 method 속성을 사용!
+        action : 전송할 주소를 지정.
+        method : 어떤 방식으로 데이터를 서버에 전달할 지.
+            HTTP 방식 중, GET과 POST방식을 지정할 수 있다.
+            (http : 클라이언트와 서버간 통신 방법 규칙)
+            (GET : 서버로부터 정보를 조회하기 위한 메소드)
+            (POST : 리소스를 생성하거나 변경하기 위한 메소드)
+            
+            method 작성을 생략시, GET이 디폴트.
+-->
