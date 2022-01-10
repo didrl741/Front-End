@@ -1,0 +1,56 @@
+
+/* 태그 요소 선택자 */
+h3 {
+    color : green;
+    font-size: 2em;
+}
+
+/* 전체 선택자 */
+*{
+    font-style: italic;
+}
+
+/* 아이디 선택자 */
+#IDSelect {
+    color:violet;
+}
+
+/* 클래스 선택자 */
+.ClassSelect {
+    color:yellow;
+}
+
+/* 여러 선택자를 한번에 쓸 수도 있다. */
+h3, #IDSelect, .ClassSelect {
+    background-color: wheat;
+}
+
+/* 부모자식관계를 이용 : first클래스 하위의 모든 h4에 적용*/
+.first h4{
+    color: tomato;
+}
+
+/* 직계자손만을 선택 : > 사용*/
+.first > h5{
+    color:turquoise;
+}
+
+
+/*
+    css의 주석은 이렇게 단다.
+    c와 비슷한 부분이 있다.
+    
+    문법 :
+        선택자 : h3
+        선언부 : color...
+
+    이 스타일시트의 의미 : h3이라는 선택자를 가진 태그의 컬러를... 사이즈를...로
+    하여라.
+
+    기본 선택자의 종류 
+        전체 선택자 : html 내의 모든 요소를 지칭.
+        태그 요소 선택자
+        아이디 선택자
+        클래스 선택자
+
+*/

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Internal-->
+    <style>     
+        h2{
+          color: blue;  
+        }
+    </style>
+
+    <!--External-->
+    <link rel="stylesheet" href="./스타일시트/style.css" />
+
+</head>
+<body>
+
+    <header>
+        <h1 style="color: red;" >Hello World!</h1>  <!--Inline-->
+        <h2>its greeting!</h2>
+        <h3>External method used!!</h3>
+        <h3 id="IDSelect" >아이디 선택자 사용</h3>
+        <h3 class="ClassSelect" >클래스 선택자 사용</h3>
+    </header>
+
+    <div class="first">
+        <h4>first자식</h4>
+        <h5>first자식2</h5>
+        <div class="second">
+            <h4>first의 손자</h4>
+            <h5>second의 자식</h5>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            저작권 : 송양기
+        </div>
+    </footer>
+</body>
+</html>
+
+<!--
+    스타일을 적용하는 세가지 방법
+    1. Inline : html 내부에 스타일태그를 작성해서 직접 지정.
+        아주아주 간단한 웹일경우는 괜찮지만, 많아질수록 가독성 떨어지고 유지보수X
+        웹 표준 : 구조와 디자인은 분리하는것이 좋다!
+    2. Internal : 하나의 html문서가, 양이 적은 고유 스타일을 가질 때 사용.
+        역시 많아지면 가독성, 유지보수 안좋다.
+    3. External : css파일에 작성하고 html에는 링크로 연결만 해주는 방식.
+        하나의 css 문서를 여러 html에 적용할수도 있고, 여러 css를 한 html에도 가능.
+        가장 추천하는 방식이다.
+-->
