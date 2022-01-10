@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+/* 제일 위에 써주자.*/
+
 
 /* 태그 요소 선택자 */
 h3 {
@@ -36,6 +39,33 @@ h3, #IDSelect, .ClassSelect {
 }
 
 
+/* 텍스트와 폰트 스타일 */
+.font1 {
+    color:yellowgreen;
+    text-align: center;
+    line-height: 200%;
+    text-decoration: line-through;
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+            /* 'Times New Roman', Times : 폰트집합. */
+            /* serif : 제네릭 집합. */
+            /* 사용자가 'Times New Roman'또는 Times 폰트가 없으면
+                serif같은 지정된 제네릭 집합에 의해 비슷한 스타일의
+                폰트를 적용시켜줌.  */
+}
+
+/* html에 link 이용. */
+.font2 {
+    font-family: 'The Nautigal', cursive;
+}
+
+/* import 이용. */
+.font3 {
+    font-family: 'Comforter Brush', cursive;
+}
+
 /*
     css의 주석은 이렇게 단다.
     c와 비슷한 부분이 있다.
@@ -52,5 +82,13 @@ h3, #IDSelect, .ClassSelect {
         태그 요소 선택자
         아이디 선택자
         클래스 선택자
+
+    폰트
+        font-family : 폰트 집합과 제네릭 집합(비슷한 모양을 가진 폰트집합)을 지정해준다.
+        
+    웹에서 폰트 가져오기
+        HTML 문서에 링크 태그로 가져오는 방식 :
+            html의 헤더부분에 link 붙여넣고, css에서 font-family 속성 적용.
+        CSS에 import하는 방식 : 
 
 */
