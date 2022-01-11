@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hi {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+
+            padding: 20px;
+            margin-top: 20px;
+
+            border: 10px solid black;
+            border-radius: 20px;
+        }
+
+        div {
+            width:150px;
+            height:50px;
+            background-color: brown;
+            box-sizing: border-box;
+        }
+
+        .box2 {
+            border: 10px solid black;
+        }
+
+        .box3 {
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class ="hi"></div>
+
+    <div class="box1">box1</div>
+    <div class="box2">box1</div>
+    <div class="box3">box1</div>
+</body>
+</html>
+
+<!--
+    padding
+        padding: 20px : 상하좌우
+        padding: 20px 10px : 상하는 20, 좌우는 10
+        padding: 20px 10px 5px : 상20 좌우10 하5
+        4번 지정 : 위 오른 아래 왼쪽.
+        특정 방향만 지정 : padding-top 등등..
+    margin도 마찬가지.
+
+
+    테두리 대표 속성
+        border : 사이즈, 스타일 종류, 컬러
+        border-radius
+
+
+    박스모델과 박스사이징
+        여러 박스모델을 사용해서 웹문서를 작성하다보면, 크기와 예상과 달라질 때가 있다.
+        이것은 박스의 width와 height가 박스가 아닌 내용물의 크기를 칭해서 그런것.
+        박스의 크기를 맞출려면 -> box-sizing: border-box;
+        이것은 내용물이 아니라 테두리로 기준은 바꾼다!
+-->

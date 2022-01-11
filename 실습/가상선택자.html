@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        a{
+            color:chartreuse;
+        }
+
+        a:hover {
+            background-color: chocolate;
+        }
+
+        .box {
+            width:100px;
+            height: 50px;
+            background-color: cornflowerblue;
+            margin-bottom: 10px;
+        }
+
+        .box:hover {
+            background-color: darkcyan;
+        }
+
+        input:focus {
+            background-color: darkgreen;
+        }
+
+        .children {
+            width:50px;
+            height:50px;
+            display : inline-block;
+            background-color: skyblue;
+        }
+
+        .parent :first-child {
+            background-color: slategray;
+        }
+
+        .parent :last-child {
+            background-color:springgreen;
+        }
+
+        .parent :nth-child(3) {
+            background-color:violet;
+        }
+
+        .parent :nth-child(even) {
+            background-color: tomato;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <a href="#">가상선택자!</a>
+
+    <div class = "box"></div>
+    <input type="text" placeholder="이름을 입력하세요" />
+
+    <div class = "parent">
+        <div class="children">1</div>
+        <div class="children">2</div>
+        <div class="children">3</div>
+        <div class="children">4</div>
+        <div class="children">5</div>
+    </div>
+</body>
+</html>
+
+<!--
+    가상선택자
+        a : hover에서 hover와 같은 것들을 가상 선택자 라고 한다.
+
+    구조적 가상선택자
+        : 어떤 요소가 몇 번째에 있는지에 따라 다른 스타일을 지정하기 위함.
+
+-->

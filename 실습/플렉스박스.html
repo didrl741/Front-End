@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display:flex;
+            flex-direction:row ;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 600px;
+            height: 80px;
+            background-color: pink;
+        }
+
+        .container2 {
+            display:flex;
+            flex-direction:row ;
+            flex-wrap: wrap;
+            /*justify-content: center; 
+            justify-content:space-between; */
+            justify-content: space-around;
+        }
+
+        .item2 {
+            width: 60px;
+            height: 80px;
+            background-color: chartreuse;
+        }
+
+        .container3 {
+            display:flex;
+            flex-direction:row ;
+            flex-wrap: wrap;
+            
+            height:30vh;
+            /* align-items: flex-end;  높이 50의 끝에 붙는다. */
+            align-items: stretch;
+        }
+
+        .item3 {
+            width: 60px;
+            /*height: 80px;*/
+            background-color: chartreuse;
+        }
+
+        .container4 {
+            display:flex;
+            flex-direction:row ;
+
+        }
+
+        .item4 {
+            width: 60px;
+            /*height: 80px;*/
+            background-color: crimson;
+
+            flex-basis: 100px;
+            flex-grow:1;
+        }
+
+        .item5 {
+            background-color: cyan;
+            flex-grow:1;
+            order:2;
+        }
+
+        .item6 {
+            background-color: darkkhaki;
+            flex-grow:2;
+            order:3;
+        }
+
+        .item7 {
+            background-color: darksalmon;
+            flex-grow:3;
+            order:1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">아이템</div>
+        <div class="item">하이</div>
+        <div class="item">헬로</div>
+    </div>
+
+    <br />
+
+    <div class="container2">
+        <div class="item2">아이템</div>
+        <div class="item2">하이</div>
+        <div class="item2">헬로</div>
+    </div>
+
+    <br />
+
+    <div class="container3">
+        <div class="item3">아이템</div>
+        <div class="item3">하이</div>
+        <div class="item3">헬로</div>
+    </div>
+
+    <br />
+
+    <div class="container4">
+        <div class="item5">아이템</div>
+        <div class="item6">하이</div>
+        <div class="item7">헬로</div>
+    </div>
+</body>
+</html>
+
+<!--
+    플렉스
+        : css에서 레이아웃을 다루기 위해 사용되는 주요 기능중 하나.
+        플렉스 레이아웃은 플렉스를 적용할 컨테이너와 플렉스 관련 속성이 적용돼서
+        배치될 실제 아이템들로 구성.
+        플렉스 컨테이너에 display 속성을 flex로 지정해서 사용 가능!
+        또 이래야한 아이템에 flex 속성 지정 가능.
+
+    축
+        메인 축 : 아이템들이 정렬된 방향의 축
+        교차 죽 : 수직인 방향의 축.
+
+    컨테이너 플렉스
+        flex-direction: row : 디폴트.       -> 메인축 : 가로   
+        flex-direction: column : 세로로 배치.       -> 메인축 : 세로
+        flex-direction: column-reverse;     거꾸로 배치.
+        flex-direction: row-reverse;
+
+        flex-wrap: 아이템 크기가 컨테이너 전체 크기보다 커질 때 아이템의 줄바꿈을
+            어떻게 할 것인지.
+
+        flex-flow : flex-direction과 flex-wrap을 한번에 작성 가능.
+
+        justyfy-content : 메인축 방향의 아이템 정렬.
+        
+        align-items : 교차축 방향의 아이템 정렬. 꼭 높이를 지정하고 사용하자.
+            stretch : 교차축 방향으로 길이가 쫙 늘어남.
+                이게 디폴트지만, 아이템의 높이를 지정해놓으면 반응X
+
+        align-content: flex-wrap이 wrap이고 아이템이 2개이상 정렬되어 있을 때
+            교차축의 정렬을 지정함. align-items나 justyfy-content 와
+            동작이 똑같다.
+
+
+    아이템 플렉스
+        flex-basis : 플렉스 아이템의 기본 크기를 지정.
+            메인축 방향이 가로일때는 가로, 세로일 때는 세로.
+
+        flex-grow : 아이템의 크기가 flex-basis로 지정된 기본값에서 얼마나
+            늘어날 수 있는지를 지정. 디폴트는 0 (안늘어남)
+            각각 아이템마다 다른값을 지정해주면 지정된 크기 외에 남는 공간에서
+            비율대로 늘어남.
+
+        flex-shrink : grow속성과는 반대로, 얼마나 작아질 수 있는지.
+            1 : 작아질 수 있음.
+            0 : 작아질 수 없음. -> 기본값 이하로는 작아지면 안될 때 사용.
+                더 줄이면 스크롤이 생긴다.
+
+        flex : basis, frow, shrink를 한번에 적용할 수 있는 속성.
+            frex: 1 0 300px -> grow 1  shrink 0  basis 300px.
+
+        align-self : 단일아이템 자기자신의 교차축 방향 정렬을 지정.
+
+        order : 아이템에 배치 순서를 지정. 숫자값을 가짐. 작을수록 높은 순위.
+-->
