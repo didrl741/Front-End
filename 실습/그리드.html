@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./스타일시트/grid.css"/>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;   /* 3열 구성, 각각 크기 */
+            grid-template-columns: repeat(3, 1fr);  /* 위와 같다. */
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+            /* 최소크기(창을줄여도줄지않는)와 최대크기 지정 */
+
+            grid-template-rows: 50px 100px 150px;        /* 비율지정 */
+
+            gap:10px 30px;
+        }
+
+        .container2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            
+        }
+
+        .container3 {
+            display: grid;
+            grid-template-columns: repeat(3,minmax(100px, 1fr));
+            grid-template-rows: repeat(3, minmax(100px, 1fr));
+            justify-items: center;  /*가로방향에서 센터정렬 */
+            align-items: center;    /*세로방향에서 센터정렬 */
+        }
+
+        .container4 {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            grid-auto-rows: 100px;
+            justify-content: center;
+
+            height: 100vh;
+            align-content:center ;
+        }
+
+        .box22 {
+            grid-column: 2/4;   /* 그 박스의 시작과 끝 지정. */
+            grid-row: 1/3;
+
+            justify-self: center;
+            align-self: center;
+        }
+
+        .box99 {
+            grid-column: span 2;
+            order: 1    /* 다른 박스들이 기본 0이므로, 뒤로밀려남 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item box1">1</div>
+        <div class="item box2">2</div>
+        <div class="item box3">3</div>
+        <div class="item box4">4</div>
+        <div class="item box5">5</div>
+        <div class="item box6">6</div>
+        <div class="item box7">7</div>
+        <div class="item box8">8</div>
+        <div class="item box9">9</div>
+        <div class="item box10">10</div>
+    </div>
+
+    <br />
+
+    <div class="container2">
+        <div class="item box1">1</div>
+        <div class="item box2">2</div>
+        <div class="item box3">3</div>
+        <!-- <div class="item box4">4</div>
+        <div class="item box5">5</div>
+        <div class="item box6">6</div>
+        <div class="item box7">7</div>
+        <div class="item box8">8</div>
+        <div class="item box9">9</div>
+        <div class="item box10">10</div> -->
+    </div>
+    <br />
+
+    <div class="container3">
+        <div class="item box1">1</div>
+        <div class="item box2">2</div>
+        <div class="item box3">3</div>
+        <div class="item box4">4</div>
+        <div class="item box5">5</div>
+        <div class="item box6">6</div>
+        <div class="item box7">7</div>
+        <div class="item box8">8</div>
+        <div class="item box9">9</div>
+        <div class="item box10">10</div>
+    </div>
+
+    <br />
+
+    <div class="container4">
+        <div class="item box1">1</div>
+        <div class="item box22 box2">2</div>
+        <div class="item box3">3</div>
+        <div class="item box4">4</div>
+        <div class="item box5">5</div>
+        <div class="item box6">6</div>
+        <div class="item box7">7</div>
+        <div class="item box8">8</div>
+        <div class="item box9 box99">9</div>
+        <div class="item box10">10</div>
+    </div>
+</body>
+</html>
+
+<!--
+    그리드 : flex와 같이 css에서 레이아웃을 다루기 위해 사용되는 기능.
+        플렉스가 가로or세로 단일방향 배치가 적합하다면, 그리드는 표 같은
+        행과 열로 구성된 레이아웃 배치에 적합하다.
+        플렉스와 마찬가지로, 컨테이너에 적용속성과 아이템에 적용속성이 있다.
+
+        auto-fill 과 auto-fit : 행이나 열의 갯수를 미리 지정하지 않고, 가능한 공간에
+            최대한 많은 셀을 배치하기 위함.
+            auto-fill : 셀을 최대한 많이 배치하고 갯수가 부족할 경우, 
+                비어있는 셀을 만들어서 채운다.
+            auto-fit : 남은 공간에 셀을 늘려서 채운다.
+
+        justify-content, align-content : 아이템들의 합이 컨테이너 크기보다 작을
+            때 각각 가로, 세로 정렬.
+            세로방향 할 때는 컨테이너 속성 높이값 지정 해줘야 함.
+-->
