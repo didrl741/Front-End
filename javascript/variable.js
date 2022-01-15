@@ -16,15 +16,15 @@ console.log(name);
 
 //console.log(n);      c와 마찬가지로 지역변수는 밖에서 사용 불가.
 
-// 2. var 
-// : ES6 이전에 선언시 사용했던 단어.
+// 2. Variable, rw(read/write)
+// var : ES6 이전에 선언시 사용했던 단어.
 // var hoisting : 선언 위치에 상관없이 선언문이라면 제일 위로 끌어올려주는 기능.
 // var는 지역에서 선언해도 밖에서 쓸 수 있다.
 age=4;
 var age;
 
 
-// 3. const
+// 3. Const, r(read only)
 // : 값을 변경할 수 없는 변수. 주로 보안상의 이유로 사용.
 
 const k = 10;
@@ -35,6 +35,7 @@ const k = 10;
 // 4. Variable types
 // primitive , single item : number, string, boolean, null, undefined, symbol
 // object, box container (여러 primitive를 담음)
+// primitive는 값으로, object는 포인터로 저장이 됨.
 // function, first-class function (인자나 return값으로도 가능하다는 의미)
 
 // c나 다른언어는(저급언어) 숫자만 해도 int, long등 다양하게 메모리 크기를 할당하는데 반해
@@ -112,3 +113,12 @@ console.log(`value : ${text}, type: ${typeof text}`);   // number가 됨.
 // object
 const ellie = {name: 'ellie', age:20};
 ellie.age=21;       // ellie 자체는 잠겨있지만 ellie.age는 풀려있다고 한다.
+
+
+
+// Note!
+// Immutable data types : primitive types, frozen objects
+// data 자체를 변경 못함.
+
+// Mutable data types : all objects by default are mutable in JS
+// 예 : 위에 ellie.age를 변경한 것
