@@ -1,0 +1,95 @@
+body {
+    margin:0;
+    font-family: 'Comforter Brush', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color:salmon;
+    padding: 8px 12px;
+}
+
+.navbar_logo {
+    font-size: 24px;
+}
+
+.navbar_logo i {
+    color: blueviolet;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+    background-color: violet;
+    border-radius: 15px;
+}
+
+.navbar_icons {
+    list-style: none;
+    color: white;
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
+
+.navbar_toggle {
+    display:none;
+    position: absolute;
+    right: 28px;
+    top: 15px;
+    font-size: 24px;
+    color: slateblue;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        flex-direction:column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .navbar_menu li {
+        width:100%;
+        text-align: center;
+    }
+
+    .navbar_icons {
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar_toggle {
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
+    }
+}
