@@ -55,7 +55,7 @@ console.log(fruits);
 //fruits.splice(2);       // 인덱스 2부터 다 지움.
 console.log(fruits);
 
-fruits.splice(2,1);       // 인덱스 2부터 1개를 지움.
+fruits.splice(2,1);       // 인덱스 2부터 1개를 지움. 리턴값 : 지워진 배열.
 console.log(fruits);
 
 fruits.splice(2,1, 'melon', 'pear');       // 지우고 그 자리에 이것들 넣음. 
