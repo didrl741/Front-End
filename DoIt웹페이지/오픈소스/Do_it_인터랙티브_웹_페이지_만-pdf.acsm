@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fulfillmentToken fulfillmentType="buy" xmlns="http://ns.adobe.com/adept">
+    <distributor>urn:uuid:00000000-0000-0000-0000-000000000001</distributor>
+    <operatorURL>http://books.google.com/books/acs4/fulfillment</operatorURL>
+    <expiration>2022-01-20T21:26:35-08:00</expiration>
+    <transaction>ge:fff58678-f2f1-7a25-7030-dde95a3c25ba:1642741895230995</transaction>
+    <userId>01105620548427201258</userId>
+    <resourceItemInfo>
+        <resource>urn:uuid:fff58678-f2f1-7a25-7030-dde95a3c25ba</resource>
+        <resourceItem>1</resourceItem>
+        <src>https://books.google.com/books/download/Do_it_%EC%9D%B8%ED%84%B0%EB%9E%99%ED%8B%B0%EB%B8%8C_%EC%9B%B9_%ED%8E%98%EC%9D%B4%EC%A7%80_%EB%A7%8C.pdf?acsid=urn:uuid:fff58678-f2f1-7a25-7030-dde95a3c25ba&amp;output=acs4_book_bytes&amp;ar=1bcd0acf3eae0941a2d762579be497cc</src>
+        <downloadType>simple</downloadType>
+    </resourceItemInfo>
+    <hmac>WzTJT8JGAYK3KsQLEmrrbStMeYo=</hmac>
+</fulfillmentToken>

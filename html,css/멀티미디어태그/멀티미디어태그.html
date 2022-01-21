@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <img width="300px" height="200px" src="../기본문법1/img/wine.jpeg" alt="Wine">
     <!--alt : 코멘트.-->
 
-    <video
-        controls
-        width="500px" height="600px"
-        src="./play.mp4">
+    <video controls loop preload width="500px" height="600px" src="./play.mp4" poster="../기본문법1/img/wine.jpeg">
     </video>
 
-    <audio
-        controls
-        src="./music.m4a">
+    <audio controls src="./music.m4a">
     </audio>
 
 </body>
+
 </html>
 
 <!--
@@ -35,6 +33,7 @@
         실행을 위해서는 controls라는 태그 추가해야 함.
         autoplay 속성 : 자동재생
         loop 속성 : 반복재생.
+        poster: 썸네일
 
     오디오태그
         비디오태그와 사용법이 유사하다.
