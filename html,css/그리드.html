@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./스타일시트/grid.css"/>
+    <link rel="stylesheet" href="./스타일시트/grid.css" />
+
     <style>
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr ;   /* 3열 구성, 각각 크기 */
-            grid-template-columns: repeat(3, 1fr);  /* 위와 같다. */
+            grid-template-columns: 1fr 1fr 1fr;
+            /* 3열 구성, 각각 크기 */
+            grid-template-columns: repeat(3, 1fr);
+            /* 위와 같다. */
             grid-template-columns: repeat(3, minmax(200px, 1fr));
             /* 최소크기(창을줄여도줄지않는)와 최대크기 지정 */
 
-            grid-template-rows: 50px 100px 150px;        /* 비율지정 */
+            grid-template-rows: 50px 100px 150px;
+            /* 비율지정 */
 
-            gap:10px 30px;
+            gap: 10px 30px;
         }
 
         .container2 {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            
+
         }
 
         .container3 {
             display: grid;
-            grid-template-columns: repeat(3,minmax(100px, 1fr));
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
             grid-template-rows: repeat(3, minmax(100px, 1fr));
-            justify-items: center;  /*가로방향에서 센터정렬 */
-            align-items: center;    /*세로방향에서 센터정렬 */
+            justify-items: center;
+            /*가로방향에서 센터정렬 */
+            align-items: center;
+            /*세로방향에서 센터정렬 */
         }
 
         .container4 {
@@ -41,11 +48,12 @@
             justify-content: center;
 
             height: 100vh;
-            align-content:center ;
+            align-content: center;
         }
 
         .box22 {
-            grid-column: 2/4;   /* 그 박스의 시작과 끝 지정. */
+            grid-column: 2/4;
+            /* 그 박스의 시작과 끝 지정. */
             grid-row: 1/3;
 
             justify-self: center;
@@ -54,10 +62,12 @@
 
         .box99 {
             grid-column: span 2;
-            order: 1    /* 다른 박스들이 기본 0이므로, 뒤로밀려남 */
+            order: 1
+                /* 다른 박스들이 기본 0이므로, 뒤로밀려남 */
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="item box1">1</div>
@@ -116,6 +126,7 @@
         <div class="item box10">10</div>
     </div>
 </body>
+
 </html>
 
 <!--
