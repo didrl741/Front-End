@@ -70,14 +70,8 @@
     }
 
 
-    // html에서는 form을 submit 했을 때 브라우저가 refresh되는것이 기본 동작이다.
-    // 이것을 막을려면 preventDefault() 해줘야 한다.
 
-    const FormTag = () => {
-      function handleFormSubmit(event) {
-        event.preventDefault();
-        console.log("폼 전송됨");
-      }
+    const FormTag = ({ handleFormSubmit }) => {
       return (
         <form onSubmit={handleFormSubmit} >
           <input type="text" name="name" placeholder="영어 대사를 입력해주세요" />
@@ -86,20 +80,15 @@
       )
     }
 
+    // const [counter, setCounter] = React.useState(1);    이라고 해도 됨.
+
 
     const MainCard = ({ img }) => {
-      function handleHeartClick() {
-        console.log("하트 눌렀음!");
-      }
-
-      function handleHeartMouseOver() {
-        console.log("마우스 스쳐 지나간다~");
-      }
 
       return (
         <div className="main-card">
           <img src={img} alt="고양이" width="400" />
-          <button onClick={handleHeartClick} onMouseOver={handleHeartMouseOver}  >🤍</button>
+          <button>🤍</button>
         </div>
       );
     };
@@ -117,18 +106,39 @@
     <Card title="리액트~" description="리액트입니다" />
 
 
-    const app = (         // 최상위 태그가 1개가 되게끔, div나 다른걸로 묶어주자.
-      <div>
-        <H1Tag>1번째 jjal</H1Tag>
-        <FormTag />
-        <MainCard img="https://cataas.com/cat/60b73094e04e18001194a309/says/react" />
-        <Favorites />
-      </div>
-    );
+    const App = () => {
+
+      const CAT1 = "https://cataas.com/cat/60b73094e04e18001194a309/says/react";
+      const CAT2 = "https://cataas.com//cat/5e9970351b7a400011744233/says/inflearn";
+      const CAT3 = "https://cataas.com/cat/595f280b557291a9750ebf65/says/JavaScript";
+
+      const counterState = React.useState(1);
+      const counter = counterState[0];
+      const setCounter = counterState[1];
+
+      const [mainCat, setMainCat] = React.useState(CAT1);
+
+      function handleFormSubmit(event) {
+        event.preventDefault();
+
+        setCounter(counter + 1);
+        setMainCat(CAT2);
+      };
+
+
+      return (
+        <div>
+          <H1Tag>{counter}번째 jjal</H1Tag>
+          <FormTag handleFormSubmit={handleFormSubmit} />
+          <MainCard img={mainCat} />
+          <Favorites />
+        </div>
+      );
+    };
 
     const renderHere = document.querySelector('#app');
 
-    ReactDOM.render(app, renderHere);
+    ReactDOM.render(<App />, renderHere);
 
   </script>
 </body>
