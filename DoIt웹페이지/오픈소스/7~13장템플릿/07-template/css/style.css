@@ -9,6 +9,7 @@
 ul {
 	list-style: none;
 }
+
 a {
 	text-decoration: none;
 }
@@ -26,7 +27,7 @@ section {
 	border-radius: 15px;
 }
 
-nav.menu {
+/* nav.menu {
 	width: 100%;
 }
 
@@ -47,22 +48,124 @@ nav.menu a:nth-of-type(1) {
 
 nav.menu a:nth-of-type(2) {
 	float: right;
-}
+} */
 
-/* nav.menu {
+nav.menu {
 	display: flex;
 	justify-content: space-between;
 	font-size: 20px;
-} */
+}
 
 section article.profile {
-	/* width: 100%; */
 	text-align: center;
 }
 
 section article.profile img {
 	width: 200px;
-	height: 200px;
+
 	border-radius: 50%;
 	box-shadow: 5px 15px 15px rgba(173, 216, 230, 0.8);
+}
+
+.profile h1 {
+	font-weight: bold;
+	font-size: 22px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 2;
+	color: #555;
+	margin-bottom: 5px;
+}
+
+.profile h2 {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: thistle;
+	margin-bottom: 30px;
+}
+
+.view {
+	display: block;
+	width: 180px;
+	height: 32px;
+	margin: 10px auto 20px;
+
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	box-shadow: 5px 15px 15px rgba(173, 216, 230, 0.8);
+	color: #fff;
+	line-height: 32px;
+
+	background: linear-gradient(45deg, #4affff, #35e0f7);
+}
+
+.contact {
+	margin-bottom: 25px;
+}
+
+.contact li {
+	/* width: 100%; */
+	padding: 10px 0px;
+	border-bottom: 1px solid #eee;
+}
+
+.contact li:last-child {
+	border-bottom: none;
+}
+
+.contact li i {
+	width: 20%;
+	text-align: center;
+	color: #555;
+	font-size: 15px;
+	text-shadow: 2px 2px 2px #ddd;
+}
+
+.contact li span {
+	font-size: 11px;
+	color: #555;
+	letter-spacing: 1px;
+}
+
+.others {
+	/* width: 100%; */
+	/* text-align: center; */
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.others a {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin: 0px 10px;
+
+	opacity: 0.3;
+}
+
+.others a:nth-of-type(1) {
+	background-color: #35e0f7;
+	box-shadow: 5px 5px 10px rgba(74, 255, 255, 0.7);
+}
+
+.others a:nth-of-type(2) {
+	background-color: #55f5cd;
+	box-shadow: 5px 5px 10px rgba(74, 255, 255, 0.7);
+}
+
+.others a:nth-of-type(3) {
+	background-color: #ff80df;
+	box-shadow: 5px 5px 10px rgba(74, 255, 255, 0.7);
+}
+
+.others a:nth-of-type(4) {
+	background-color: #a794fd;
+	box-shadow: 5px 5px 10px rgba(74, 255, 255, 0.7);
+}
+
+.others a.on {
+	opacity: 1;
 }
