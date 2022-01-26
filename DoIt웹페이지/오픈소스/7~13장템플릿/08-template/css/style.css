@@ -2,7 +2,7 @@
 * {
 	margin: 0px;
 	padding: 0px;
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 }
 ul,
 ol {
@@ -10,4 +10,113 @@ ol {
 }
 a {
 	text-decoration: none;
+	font-family: fantasy;
+}
+
+.top {
+	/* width: 100%; */
+	display: flex;
+	justify-content: end;
+	font-size: 6px;
+}
+
+.top li {
+	margin: 10px 10px;
+}
+
+header h1 {
+	font-size: 30px;
+	margin-top: 30px;
+	margin-left: 60px;
+}
+
+header .menu {
+	display: flex;
+	justify-content: end;
+	margin-right: 70px;
+	font-size: 22px;
+}
+
+header .menu li {
+	padding: 5px 10px;
+}
+
+header .menu li:hover {
+	background-color: slategrey;
+}
+
+header .menu a:hover {
+	color: white;
+}
+
+figure h1 {
+	position: absolute;
+	top: 300px;
+	color: white;
+}
+
+figure p {
+	position: absolute;
+	top: 350px;
+	color: white;
+}
+
+figure a {
+	width: 200px;
+	border: 1px solid green;
+	padding: 3px 60px;
+	color: green;
+}
+
+figure video {
+	width: 100%;
+}
+
+section {
+	padding: 20px 20px;
+}
+
+section h1 {
+	text-align: center;
+}
+
+section h2 {
+	font-size: 14px;
+}
+
+section p {
+	font-size: 12px;
+}
+
+section ul {
+	display: flex;
+	justify-content: center;
+}
+
+section img {
+	width: 300px;
+}
+
+section ul li {
+	margin: 10px 10px;
+	width: 300px;
+}
+
+footer {
+	background-color: darkcyan;
+	color: white;
+	padding: 20px 300px;
+}
+
+footer a {
+	color: white;
+}
+
+footer .btm {
+	display: flex;
+	justify-content: end;
+}
+
+footer .btm li {
+	margin: 2px 3px;
 }
