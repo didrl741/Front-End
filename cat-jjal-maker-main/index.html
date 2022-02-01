@@ -27,8 +27,8 @@
   }
 
   /* .favorites img {
-    width: 150px; */
-  }
+    width: 150px; 
+  }*/
 </style>
 
 <body>
@@ -65,7 +65,6 @@
       );
     }
 
-    // key: 배열 순회를 할 때 요소마다 유니크한 id값이 필요. (실무에선 보통 필요함)
 
 
     const H1Tag = (props) => {
@@ -75,11 +74,41 @@
 
 
 
-    const FormTag = ({ handleFormSubmit }) => {
+    const FormTag = () => {
+
+      const [value, setValue] = React.useState("");
+
+      const [errorMessage, setErrorMessage] = React.useState("");
+
+      const includesHangul = (text) => /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/i.test(text);
+
+      function handleInputChange(e) {
+
+        const userValue = e.target.value;
+        setErrorMessage("");
+        if (includesHangul(userValue)) {
+          setErrorMessage("한글은 입력할 수 없습니다");
+        }
+
+
+        setValue(userValue.toUpperCase());
+      }
+
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        if (value === '') {
+          setErrorMessage('빈 값으로 생성 불가!');
+        }
+      }
+
       return (
         <form onSubmit={handleFormSubmit} >
-          <input type="text" name="name" placeholder="영어 대사를 입력해주세요" />
+          <input type="text" name="name" placeholder="영어 대사를 입력해주세요"
+            onChange={handleInputChange}
+            value={value}
+          />
           <button type="submit">생성</button>
+          <p style={{ color: "red" }} >{errorMessage}</p>
         </form>
       )
     }
@@ -130,12 +159,11 @@
       };
 
 
-      // Favorites컴포넌트, MainCard 컴포넌트는 이 함수를 공유하기 때문에
-      // 여기에 작성했다.
+
       function handleHeartClick() {
         console.log("하트 눌렀음!");
         setFavorites([...favorites, CAT3]);
-        // favorites 배열에 CAT3를 추가하는 JS 문법.
+
       }
 
       return (
